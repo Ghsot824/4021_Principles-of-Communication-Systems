@@ -1,0 +1,15 @@
+clc
+clear 
+close all
+
+mean = 0;
+sigma = 1;
+N = 1e3;
+X = mean + sigma * randn(1000, 1);
+Y = mean + sigma * randn(1000, 1);
+figure,
+subplot(2,1,1), histogram(X,100,'FaceColor','red');
+subplot(2,1,2), histogram(Y,100);
+
+Z = sqrt(X.^2 + Y.^2);
+figure, histogram(Z,100,'FaceColor','green');
